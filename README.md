@@ -1,6 +1,6 @@
 # React TS Starter
 
-A starter project written with Typescript, based on React.
+A starter project written with Typescript, based on React, featuring a Tasks List.
 
 ## Installation
 `yarn install`

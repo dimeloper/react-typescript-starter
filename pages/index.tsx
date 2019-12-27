@@ -1,5 +1,9 @@
 import React from 'react';
 import { NextPage } from 'next';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { reducer } from '../store/reducer';
+import { ConnectedTasksList } from '../components/TasksList';
 
 interface InitialProps {
   greeting: string;
@@ -7,8 +11,15 @@ interface InitialProps {
 
 interface Props extends InitialProps {}
 
+const store = createStore(reducer);
+
 const IndexPage: NextPage<Props, InitialProps> = props => {
-  return <div>{props.greeting}</div>;
+  return (
+    <Provider store={store}>
+      <div>{props.greeting}</div>
+      <ConnectedTasksList/>
+    </Provider>
+  );
 };
 
 IndexPage.getInitialProps = async () => ({

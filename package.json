@@ -11,12 +11,15 @@
   "dependencies": {
     "next": "^9.1.6",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-pages": "^0.3.4",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@types/node": "^12.7.1",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.5",
     "typescript": "^3.7.2"
   },
   "license": "MIT"
