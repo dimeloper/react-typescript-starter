@@ -7,5 +7,5 @@ export interface FetchTasksAction extends Action<'FETCH_TASKS'> {
 
 export const fetchTasks = (): FetchTasksAction => ({
   type: 'FETCH_TASKS',
-  tasks: [{ title: 'First Task' }, { title: 'Second Task' }]
+  tasks: [{ title: 'First Task' }, { title: 'Second Task' }],
 });

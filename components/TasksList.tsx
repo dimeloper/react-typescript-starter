@@ -37,7 +37,12 @@ export class TasksList extends React.Component<AllProps> {
   }
 }
 
-export const ConnectedTasksList = connect<StateProps,
+export const ConnectedTasksList = connect<
+  StateProps,
   DispatchProps,
   OwnProps,
-  AppState>(state => ({ tasks: state.tasks }), dispatch => ({ fetchTasks: () => dispatch(fetchTasks()) }))(TasksList);
+  AppState
+>(
+  state => ({ tasks: state.tasks }),
+  dispatch => ({ fetchTasks: () => dispatch(fetchTasks()) }),
+)(TasksList);

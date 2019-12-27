@@ -17,13 +17,13 @@ const IndexPage: NextPage<Props, InitialProps> = props => {
   return (
     <Provider store={store}>
       <div>{props.greeting}</div>
-      <ConnectedTasksList/>
+      <ConnectedTasksList />
     </Provider>
   );
 };
 
 IndexPage.getInitialProps = async () => ({
-  greeting: 'Hello World!'
+  greeting: 'Hello World!',
 });
 
 export default IndexPage;

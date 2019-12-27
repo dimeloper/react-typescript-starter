@@ -6,15 +6,18 @@ export interface AppState {
 }
 
 const defaultState = {
-  tasks: []
+  tasks: [],
 };
 
-export const reducer = (state: AppState = defaultState, action: FetchTasksAction) => {
+export const reducer = (
+  state: AppState = defaultState,
+  action: FetchTasksAction,
+) => {
   switch (action.type) {
     case 'FETCH_TASKS':
       return {
         ...state,
-        tasks: action.tasks
+        tasks: action.tasks,
       };
   }
   return state;
